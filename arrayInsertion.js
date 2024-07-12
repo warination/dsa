@@ -1,4 +1,6 @@
-function dataIns(anArr) {
+function dataIns() {
+  let data = [23, 6, 534, 876, 3, 53, 97, 3, 35];
+
   let position = 3;
 
   for (let i = data.length - 1; i >= 0; i--) {
@@ -12,6 +14,4 @@ function dataIns(anArr) {
   return data;
 }
 
-let data = [23, 6, 534, 876, 3, 53, 97, 3, 35];
-
-console.log(dataIns(data));
+console.log(dataIns());
