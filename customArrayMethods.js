@@ -22,13 +22,13 @@ class anArray {
   }
 
   shift() {
-    const lastItem = this.data[0];
+    const firstItem = this.data[0];
     for (let i = 0; i < this.length; i++) {
       this.data[i] = this.data[i + 1];
     }
     delete this.data[this.length - 1];
     this.length--;
-    return lastItem;
+    return firstItem;
   }
 
   unshift(item) {
@@ -49,6 +49,14 @@ class anArray {
     this.length--;
     return item;
   }
+
+  slice(start, end) {
+    const slice = [];
+    for (let i = start; i < end; i++) {
+      slice.push(this.data[i]);
+    }
+    return slice;
+  }
 }
 
 const myArr = new anArray();
@@ -60,5 +68,5 @@ myArr.push("my");
 myArr.push("javascript tutorial");
 
 console.log(myArr);
-console.log(myArr.unshift(12));
+console.log(myArr.slice(1, 2));
 console.log("---------", myArr);

@@ -2,8 +2,7 @@ const chunkArray = (arr, value) => {
   let chunkedArr = [];
   let index = 0;
   while (index < arr.length) {
-    let chunk = [];
-    chunk = arr.slice(index, index + value);
+    let chunk = arr.slice(index, index + value);
     chunkedArr.push(chunk);
     index += value;
   }
